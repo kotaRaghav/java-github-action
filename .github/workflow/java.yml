@@ -1,6 +1,10 @@
 name: Run Java Code
 
-on: [push]
+on:
+  workflow_dispatch:       # ✅ Enables manual trigger from the GitHub Actions UI
+  push:                    # ✅ Still triggers on push as usual
+    branches:
+      - main               # Adjust if you're using a different branch
 
 jobs:
   build:
